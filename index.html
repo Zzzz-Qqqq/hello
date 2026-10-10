@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World 我的第一个AI网站</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            min-height:100vh;
+            background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-family: "Microsoft Yahei", "PingFang SC", sans-serif;
+            color:#fff;
+            padding:20px;
+        }
+        .card{
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(12px);
+            padding:60px 50px;
+            border-radius:24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            text-align:center;
+            max-width:560px;
+            width:100%;
+        }
+        .title{
+            font-size:30px;
+            margin-bottom:18px;
+            line-height:1.4;
+            font-weight:600;
+        }
+        .subtitle{
+            font-size:16px;
+            opacity:0.9;
+            margin-bottom:30px;
+        }
+        .time-box{
+            font-size:22px;
+            padding:14px 24px;
+            background:rgba(255,255,255,0.2);
+            border-radius:12px;
+            display:inline-block;
+        }
+        .badge{
+            display:inline-block;
+            margin-top:24px;
+            padding:6px 16px;
+            background:rgba(255,255,255,0.15);
+            border-radius:999px;
+            font-size:13px;
+            letter-spacing:1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 class="title">Hello World! 我是【你的名字】，我的第一个 AI 开发的网站</h1>
+        <p class="subtitle">✅ 由 AI 生成 · 纯静态 · 打开即用</p>
+        <div class="time-box">🕐 当前时间：<span id="time"></span></div>
+        <div class="badge">✦ 部署于 GitHub Pages / Vercel ✦</div>
+    </div>
+    <script>
+        function updateTime(){
+            const now = new Date();
+            document.getElementById("time").innerText = now.toLocaleString();
+        }
+        updateTime();
+        setInterval(updateTime,1000);
+    </script>
+</body>
+</html>
